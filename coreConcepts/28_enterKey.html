@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Enter key</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        window.addEventListener("keydown", keydownHandler, false);
+
+        function keydownHandler(event) {
+            if (event.keyCode === 13) {
+                console.log("Enter key pressed");
+            }
+        }
+    </script>
+</body>
+
+</html>

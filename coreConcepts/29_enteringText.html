@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Entering and displaying text</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <input id="input" type="text" placeholder="Enter some text...">
+    <button>enter</button>
+    <p id="output"></p>
+
+    <script>
+        var button = document.querySelector("button");
+        button.addEventListener("click", clickHandler, false);
+        button.style.cursor = "pointer";
+
+        function clickHandler() {
+            var input = document.querySelector("#input");
+            var output = document.querySelector("#output");
+            output.innerHTML = input.value;
+        }
+    </script>
+</body>
+
+</html>

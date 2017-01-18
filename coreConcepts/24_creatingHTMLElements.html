@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Creating HTML elements</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        var p = document.createElement("p");
+        document.body.appendChild(p);
+        p.innerHTML = "Hello World!";
+
+         //You can create an id for the element like this:
+        p.setAttribute("id", "example");
+
+         //Remove an element like this
+         //p.parentNode.removeChild(p);
+    </script>
+</body>
+
+</html>

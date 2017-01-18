@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Entering and displaying text</title>
+    <meta charset="UTF-8">
+    <style>
+        p{border: 1px solid red;}
+        .fh {
+            visibility: hidden;
+        }
+        .fv {
+            visibility: visible;
+        }
+        .dn {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="input" type="text" placeholder="Enter some text...">
+    <button>enter</button>
+    <p id="output"></p>
+    <p id="first">first</p>
+    <p id="second">second</p>
+    <p id="third">third</p>
+
+    <script>
+        window.addEventListener("keydown", keydownHandler, false);
+
+        function keydownHandler(event) {
+            if (event.keyCode === 13) {
+                clickHandler();
+//                console.log("Enter key pressed");
+            }
+        }
+            var input = document.querySelector("#input");
+            var output = document.querySelector("#output");
+        input.focus();
+
+        var button = document.querySelector("button");
+        button.addEventListener("click", clickHandler, false);
+        button.style.cursor = "pointer";
+        var first = document.querySelector("#first");
+        var second = document.querySelector("#second");
+
+        function clickHandler() {
+            input.blur();
+            output.innerHTML = input.value;
+            //            first.style.display = "none";
+            first.className = "dn";
+            second.className = "dn";
+        }
+    </script>
+</body>
+
+</html>
